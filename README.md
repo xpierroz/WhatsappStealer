@@ -23,7 +23,7 @@ Actually except that I don't really know how to use the other data but this is s
 
 ## How to use 📖
 
-* Just download this repository
+* Download this repository
 * Make sure you have python and the requirements installed (pip install -r requirements.txt)
 * Start main.py 
 * Create a payload (the program will ask you if you wanna compile the payload)
