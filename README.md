@@ -10,7 +10,7 @@
 
 <div align="center">
     <br>
-    <h1>
+    <b>
         Steal people Whatsapp Session information 
-    </h1>
+    </b>
 </div>
