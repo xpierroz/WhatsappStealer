@@ -23,9 +23,12 @@ Actually except that I don't really know how to use the other data but this is s
 
 ## How to use 📖
 
-Just download this repository
-Make sure you have python and the requirements installed (pip install -r requirements.txt)
-Start main.py 
+* Just download this repository
+* Make sure you have python and the requirements installed (pip install -r requirements.txt)
+* Start main.py 
+* Create a payload (the program will ask you if you wanna compile the payload)
+* Send the payload to your victim and make it execute it
+* Don't forget this is a POC and that this shouldn't be used for malicious purposes, i'm not responsible for your actions
 
 ## How it works 🤔
 
