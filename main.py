@@ -62,4 +62,4 @@ def main():
         _exit()
 
     
-_compile()
+main()
