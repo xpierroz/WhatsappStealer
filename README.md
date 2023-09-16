@@ -18,7 +18,7 @@
 
 ## WhatsApp Stealer 🪖
 
-This program steal the victim's WhatsApp data such as profil pictures of conversations and stuff
+This program steal the victim's WhatsApp data such as profile pictures of conversations and more
 
 ## How to use 📖
 
