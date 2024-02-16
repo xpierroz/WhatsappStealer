@@ -1,7 +1,6 @@
 from colorama import Fore
 import time
 import os
-import shutil
 import ctypes
 import requests
 
@@ -22,6 +21,7 @@ banner = """
 def _exit():
     print("\n")
     Write.Print(f"    .$ Exiting program | Please star the repo my g", Colors.yellow_to_red, interval=0.05)
+    print("\n")
     time.sleep(3)
     quit()
 
@@ -29,13 +29,18 @@ def _compile():
     print("\n")
     line = f'pyinstaller --onefile whatsapp.pyw'
     icox = Write.Input("    .$ Enter icon path (type N for none) -> ", Colors.green_to_blue, interval=0.025)
-    if icox != "N":
+    if icox != "N" or "n":
         line += f"--icon={icox}"
         
     Write.Print(f"    .$ Compiling to exe ...", Colors.green_to_yellow, interval=0.05)
     os.system('echo off')
     print(Fore.BLACK)   
+    os.system("py -m pip uninstall pathlib")
     os.system(line)
+    os.system("del /F /Q whatsapp.spec")
+    os.system("rmdir /Q /S __pycache__")
+    os.system("rmdir /Q /S build")
+    os.system("start %SystemRoot%\explorer.exe dist")
     #os.system('cls')
     print(Colorate.Horizontal(Colors.rainbow, "    .$ Successfuly Compiled", 1))  
     _exit()
@@ -56,10 +61,10 @@ def main():
         
     Write.Print(f"\n    .$ Payload fetched !", Colors.green_to_cyan, interval=0.05)
     compiling = Write.Input("\n    .$ Compile to exe [Y/N] -> ", Colors.green_to_blue, interval=0.025)
-    if compiling == "Y":
+    if compiling == "Y" or "y":
         _compile()
     else:
+        os.system("rmdir /Q /S __pycache__")
         _exit()
-
     
 main()
