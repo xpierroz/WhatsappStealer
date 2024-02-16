@@ -6,3 +6,4 @@ py -m pip install --upgrade requests pystyle
 py -m main
 
 pause
+exit
