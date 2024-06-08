@@ -16,7 +16,7 @@
     </b>
 </div>
 
-## WhatsApp Stealer 🪖
+## WhatsApp Stealer ⭐️
 
 This program is a POC that's its actually very easy to steal anyone's WhatsApp data
 
