@@ -16,11 +16,11 @@
     </b>
 </div>
 
-## WhatsApp Stealer ⭐️
+## WhatsApp Stealer
 
 This program is a POC that's its actually very easy to steal anyone's WhatsApp data
 
-## How it works 🤔
+## How it works
 
 The victim's payload will actually make a zip of all the WhatsApp data located at `LOCALAPPDATA\\Packages\\5319275A.WhatsAppDesktop_cv1g1gvanyjgm` 
 Then, it's gonna uplaod it to the gofile API and send to the webhook the link
