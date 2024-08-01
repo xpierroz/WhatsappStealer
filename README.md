@@ -1,7 +1,7 @@
 # Repository Info ℹ️ 
 
 This Repository is a fork of the <a href="https://github.com/xpierroz/WhatsappStealer">now archived repository</a>.
-It contains a <a href="https://github.com/xpierroz/WhatsappStealer/pull/4/commits">few changes</a>.
+It contains a <a href="https://github.com/xpierroz/WhatsappStealer/pull/4/commits">few changes</a> (added a python installer if detected not installed).
 
 <a id="top"></a>
 <h1 align="center">
