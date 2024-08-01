@@ -42,4 +42,8 @@ Then, it's gonna uplaod it to the gofile API and send to the webhook the link
 This is for educational purposes only, use at your own risk, I am not responsible for any of your actions!
 This project is licensed under the <a href="https://mit-license.org/.">MIT License</a>
 
+## Credits ©️
+- <a href="https://github.com/xpierroz/WhatsappStealer">Archived Repo</a>
+- <a href="hhttps://github.com/xpierroz/">Creator of the stealer</a>
+
 <p align="center"><a href=#top>Back to Top</a></p>
