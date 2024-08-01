@@ -44,7 +44,7 @@ This project is licensed under the <a href="https://mit-license.org/.">MIT Licen
 
 ## Credits ©️
 - <a href="https://github.com/xpierroz/WhatsappStealer">Archived Repo</a>
-- <a href="hhttps://github.com/xpierroz/">Archived Repo Creator</a>
+- <a href="https://github.com/xpierroz/">Archived Repo Creator</a>
 
 
 <p align="center"><a href=#top>Back to Top</a></p>
